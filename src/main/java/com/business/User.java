@@ -1,8 +1,11 @@
 package com.business;
+
 import javax.persistence.*;
 
 @Entity
 public class User {
+	
+	// Fields
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
@@ -15,6 +18,7 @@ public class User {
 	private boolean isReviewer;
 	private boolean isAdmin;
 
+	//Constructors
 	public User() {
 		super();
 	}
@@ -33,6 +37,8 @@ public class User {
 		this.isAdmin = isAdmin;
 	}
 
+	
+	// Getters and Setters
 	public int getId() {
 		return id;
 	}

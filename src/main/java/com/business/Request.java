@@ -1,5 +1,12 @@
 package com.business;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
@@ -18,7 +25,7 @@ public class Request {
 	private String justification;
 	private LocalDate dateNeeded;
 	private String deliveryMode;
-	private String Status;
+	private String status;
 	private double total;
 	private LocalDateTime submittedDate;
 	private String reasonForRejection;
@@ -37,7 +44,7 @@ public class Request {
 		this.justification = justification;
 		this.dateNeeded = dateNeeded;
 		this.deliveryMode = deliveryMode;
-		Status = status;
+		this.status = status;
 		this.total = total;
 		this.submittedDate = submittedDate;
 		this.reasonForRejection = reasonForRejection;
@@ -94,11 +101,11 @@ public class Request {
 	}
 
 	public String getStatus() {
-		return Status;
+		return status;
 	}
 
 	public void setStatus(String status) {
-		Status = status;
+		this.status = status;
 	}
 
 	public double getTotal() {
