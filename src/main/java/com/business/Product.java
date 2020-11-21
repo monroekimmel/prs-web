@@ -10,7 +10,6 @@ import javax.persistence.ManyToOne;
 @Entity
 public class Product {
 	
-// Fields
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
@@ -23,7 +22,6 @@ public class Product {
 	private String unit;
 	private String photoPath;
 
-	// Constructors
 	public Product() {
 		super();
 	}
@@ -39,7 +37,6 @@ public class Product {
 		this.photoPath = photoPath;
 	}
 	
-	// Getters and Setters
 	public int getId() {
 		return id;
 	}
