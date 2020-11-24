@@ -1,4 +1,4 @@
-package com.web;
+package com.prs.web;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -15,9 +15,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.business.Request;
+import com.prs.business.Request;
 
-import com.db.RequestRepo;
+import com.prs.db.RequestRepo;
 
 @CrossOrigin
 @RestController

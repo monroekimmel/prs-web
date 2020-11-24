@@ -1,4 +1,4 @@
-package com.business;
+package com.prs.business;
 
 import javax.persistence.*;
 

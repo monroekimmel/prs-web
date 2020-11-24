@@ -1,4 +1,4 @@
-package com.web;
+package com.prs.web;
 
 import java.util.List;
 import java.util.Optional;
@@ -15,10 +15,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.business.LineItem;
-import com.business.Request;
-import com.db.LineItemRepo;
-import com.db.RequestRepo;
+import com.prs.business.LineItem;
+import com.prs.business.Request;
+import com.prs.db.LineItemRepo;
+import com.prs.db.RequestRepo;
 
 @CrossOrigin
 @RestController

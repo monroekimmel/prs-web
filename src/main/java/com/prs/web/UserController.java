@@ -1,4 +1,4 @@
-package com.web;
+package com.prs.web;
 
 import java.util.List;
 import java.util.Optional;
@@ -8,8 +8,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
-import com.business.User;
-import com.db.UserRepo;
+import com.prs.business.User;
+import com.prs.db.UserRepo;
 
 @CrossOrigin
 @RestController
