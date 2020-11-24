@@ -16,6 +16,8 @@ public class LineItem {
 	@ManyToOne
 	@JoinColumn(name="RequestID")
 	private Request request;
+	@ManyToOne
+	@JoinColumn(name = "ProductId")
 	private Product product;
 	private int quantity;
 
