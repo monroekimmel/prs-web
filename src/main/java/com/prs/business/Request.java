@@ -14,11 +14,12 @@ import java.time.LocalDateTime;
 @Entity
 public class Request {
 	
+	// Fields
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	@ManyToOne
-	@JoinColumn(name = "UserID")
+	@JoinColumn(name = "UserId")
 	private User user;
 	private String description;
 	private String justification;
@@ -29,6 +30,7 @@ public class Request {
 	private LocalDateTime submittedDate;
 	private String reasonForRejection;
 	
+	// Constructors
 	public Request() {
 		super();
 	}
@@ -49,6 +51,7 @@ public class Request {
 	}
 
 	
+	// Getters and Setters
 	public int getId() {
 		return id;
 	}

@@ -5,8 +5,9 @@ import javax.persistence.*;
 @Entity
 public class User {
 	
+	// Fields
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	private String userName;
 	private String password;
@@ -17,6 +18,7 @@ public class User {
 	private boolean isReviewer;
 	private boolean isAdmin;
 
+	//Constructors
 	public User() {
 		super();
 	}
@@ -36,6 +38,7 @@ public class User {
 	}
 
 	
+	// Getters and Setters
 	public int getId() {
 		return id;
 	}
