@@ -25,34 +25,46 @@ import com.prs.db.VendorRepo;
 @RequestMapping("/vendors")
 public class VendorController {
 	
+	/*
+	 * A controller will implement 5 CRUD methods: 1) GET ALL 2) GET BY ID 3) POST -
+	 * INSERT 4) PUT - UPDATE 5) DELETE - DELETE
+	 */
+	
 	@Autowired
 	private VendorRepo vendorRepo;
-
+	
+	// Get all users
 	@GetMapping("/")
 	public List<Vendor> getAll() {
 		return vendorRepo.findAll();
 	}
 	
+	// Get a vendor by id
 		@GetMapping("/{id}")
 		public Optional<Vendor> getById(@PathVariable int id) {
 			return vendorRepo.findById(id);
 		}
 		
+		// Add a vendor
 		@PostMapping("/")
 		public Vendor addVendor(@RequestBody Vendor v) {
 			v = vendorRepo.save(v);
 			return v;
 		}
 		
+		// Update a user
 		@PutMapping("/")
 		public Vendor updateVendor(@RequestBody Vendor v) {
 			v = vendorRepo.save(v);
 			return v;
 		}
 
+		// Delete a user
 		@DeleteMapping("/{id}")
 		public Vendor deleteUser(@PathVariable int id) {
+			// Optional type will wrap a vendor
 			Optional<Vendor> v = vendorRepo.findById(id);
+			// isPresent() will return true if a vendor was found
 			if (v.isPresent()) {
 				vendorRepo.deleteById(id);
 			} else {

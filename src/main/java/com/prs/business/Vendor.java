@@ -5,6 +5,7 @@ import javax.persistence.*;
 @Entity
 public class Vendor {
 	
+	// Fields
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
@@ -17,6 +18,7 @@ public class Vendor {
 	private String phoneNumber;
 	private String email;
 
+	// Constructors
 	public Vendor() {
 		super();
 	}
@@ -36,6 +38,7 @@ public class Vendor {
 	}
 
 	
+	// Getters and Setters
 	public int getId() {
 		return id;
 	}
